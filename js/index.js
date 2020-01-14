@@ -63,9 +63,26 @@ window.addEventListener('scroll', (e) => {
 // DRAG - 8
 SECT_ONE_IMG.addEventListener('drag', () => {
   document.querySelector('html').style.fontSize = '62.5%';
+// // GSAP - Green Sock
+//   gsap.to('.img-content img', {
+//     duration: 1,
+//     rotate: 360,
+//     y: -5,
+//   });
 });
 
-// DROP - 9
+// GSAP - Green Sock
+SECT_ONE_IMG.addEventListener('mouseenter', () => {
+  gsap.to('.img-content img', {
+    duration: 1,
+    rotate: 360,
+    y: -20,
+    yoyo: true,
+    repeat: 1
+  });
+});
+
+// MOUSEOUT - 9
 SECT_ONE_IMG.addEventListener('mouseout', () => {
   document.querySelectorAll('.text-content').forEach(text => text.style.color = 'crimson');
   document.querySelector('.nav-container').style.flexDirection = 'column';
